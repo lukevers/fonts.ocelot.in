@@ -21,11 +21,6 @@ module.exports = function(app, config) {
 		}
 	});
 
-	// Fonts
-	app.get('/fonts', function(req, res) {
-
-	});
-
 	// 404
 	app.get('*', function(req, res) {
 		res.send('404');

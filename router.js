@@ -15,6 +15,7 @@ module.exports = function(app, config) {
 		if (!query['font-family']) {
 			res.send('Could not parse query.'); 
 		} else {
+			res.header('Access-Control-Allow-Origin', "*")
 			res.setHeader("Content-Type", "text/css");
 			var content = '@font-face {\nfont-family: '+query["font-family"]+';\nsrc: url('+config.url+'/fonts/'+query["font-family"]+'.woff) format("woff"), url('+config.url+'/fonts/'+query["font-family"]+'.ttf) format("ttf"), url('+config.url+'/fonts/'+query["font-family"]+'.otf) format("otf"), url('+config.url+'/fonts/'+query["font-family"]+'.eot) format("eot"), url('+config.url+'/fonts/'+query["font-family"]+'.svg) format("svg");\n}';
 			res.send(content);

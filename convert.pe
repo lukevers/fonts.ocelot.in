@@ -1,0 +1,13 @@
+#!/usr/bin/fontforge
+format = ""
+i = 1
+
+while ( i < $argc )
+      if ( $argv[i] == "--format")
+               format = $argv[++i]
+      else
+         Open($argv[i])
+         Generate($argv[i]:r + format)
+      endif
+      i++
+endloop

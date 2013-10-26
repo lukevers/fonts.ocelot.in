@@ -1,0 +1,7 @@
+# Editor temporary files
+*~
+\#*
+.\#*
+
+# Node Modules
+node_modules

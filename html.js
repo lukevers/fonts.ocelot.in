@@ -23,20 +23,6 @@ module.exports = function() {
 
 	html += '</body>';
 	html += '</html>';
-	/*
 
-	fs.readdir('googlefontdirectory/fonts/', function(err, files) {
-			if (err) {
-				return '';
-			} else {
-				for (var i = 0; i < files.length; i++) {
-					if (files[i].indexOf('.ttf') > -1)
-						html += '<div class="font"><div class="title">'+files[i].substring(0, files[i].length-4)+'</div>'+alphabet+'</div>';
-				}
-				html += '</body>';
-				html += '</html>';
-			}
-		});
-	*/
 	return html;
 }

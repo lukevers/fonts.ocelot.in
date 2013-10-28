@@ -6,12 +6,13 @@ var    http = require('http'),
 // Create the app
 var app = express();
 app.use('/fonts', express.static(__dirname + '/googlefontdirectory/fonts'));
+app.use('/static', express.static(__dirname + '/static'));
 
 // Load the configuration file
 var config = require('./config.json');
 
 // Load the router
-require('./router')(app, config, require('./html')());
+require('./router')(app, config, require('./html')(), require('./files')());
 
 // Serve
 http.createServer(app).listen(config.port, '::');

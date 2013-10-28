@@ -2,11 +2,11 @@
 var url = require('url');
 
 // Router module
-module.exports = function(app, config) {
+module.exports = function(app, config, html) {
 
 	// Home
 	app.get('/', function(req, res) {
-		res.send('hello world');
+		res.send(html);
 	});
 
 	// CSS

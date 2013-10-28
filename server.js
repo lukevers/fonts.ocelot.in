@@ -1,7 +1,7 @@
 // Load modules
-var http = require('http');
-var express = require('express');
-var path = require('path');
+var    http = require('http'),
+	express = require('express'),
+	   path = require('path');
 
 // Create the app
 var app = express();
@@ -11,7 +11,7 @@ app.use('/fonts', express.static(__dirname + '/googlefontdirectory/fonts'));
 var config = require('./config.json');
 
 // Load the router
-require('./router')(app, config);
+require('./router')(app, config, require('./html')());
 
 // Serve
 http.createServer(app).listen(config.port, '::');

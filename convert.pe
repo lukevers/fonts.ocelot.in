@@ -1,4 +1,4 @@
-#!/usr/bin/fontforge
+#!/usr/local/bin/fontforge
 format = ""
 i = 1
 

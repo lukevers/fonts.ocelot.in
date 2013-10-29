@@ -12,7 +12,7 @@ app.use('/static', express.static(__dirname + '/static'));
 var config = require('./config.json');
 
 // Load the router
-require('./router')(app, config, require('./html')(), require('./files')());
+require('./router')(app, config, require('./html')(config), require('./files')());
 
 // Serve
 http.createServer(app).listen(config.port, '::');

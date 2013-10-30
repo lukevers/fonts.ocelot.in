@@ -1,10 +1,10 @@
 {
-	"name": "fonts.appno.de",
+	"name": "fonts.ocelot.in",
 	"description": "Fonts for Hyperboria",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lukevers/fonts.appno.de"
+		"url": "https://github.com/lukevers/fonts.ocelot.in"
 	},
 	"dependencies": {
 		"express": "3.2.5"

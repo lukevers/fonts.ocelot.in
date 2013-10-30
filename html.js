@@ -11,7 +11,7 @@ module.exports = function(config) {
 	var html = '<!DOCTYPE html>';
 	html += '<html lang="en">';
 	html += '<head>';
-	html += '<title>Appnode Fonts</title>';
+	html += '<title>Ocelot Fonts</title>';
 	html += '<meta charset="utf-8">';
 	html += '<link rel="stylesheet" href="static/css/style.css">';
 	html += '<script type="text/javascript" src="static/js/jquery.js"></script>';
@@ -25,13 +25,6 @@ module.exports = function(config) {
 	for (var i = 0; i < files.length; i++) {
 		if (files[i].indexOf('.ttf') > -1) {
 			fileList.push(files[i].substring(0, files[i].length-4));
-			/*
-			var name = files[i].substring(0, files[i].length-4);
-			html += '<div class="font"><div class="title">'+name+'</div><div class="body" style="font-family: '+name+';">'+alphabet;
-			html += '<br/><br/><div class="choice_i">@import</div><div class="choice_h">HTML</div><div class="code_i">';
-			html += '<textarea rows="1">@import url('+config.url+'/css?font-family='+name+')</textarea></div>';
-			html += '<div class="code_h"><textarea rows="1"><link href="'+config.url+'/css?font-family='+name+'" rel="stylesheet" type="text/css"></textarea></div></div></div>';
-			*/
 		}
 	}
 

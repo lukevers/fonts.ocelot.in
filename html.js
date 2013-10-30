@@ -18,7 +18,7 @@ module.exports = function(config) {
 	html += '<script type="text/javascript" src="static/js/app.js"></script>';
 	html += '</head>';
 	html += '<body>';
-	html += '<div class="head">Appnode <span class="light">Fonts</span></div>';
+	html += '<div class="head">Ocelot <span class="light">Fonts</span></div>';
 
 	var files = fs.readdirSync('googlefontdirectory/fonts/');
 	html += '<div class="font-bin">';

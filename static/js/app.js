@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 });
 
-functio bind() {
+function bind() {
 	$('.choice_i').bind('click', function() {
 		if ($(this).nextAll('.code_i:first').css('display') == 'none') {
 			$(this).nextAll('.code_i:first, .code_h:first').toggle();

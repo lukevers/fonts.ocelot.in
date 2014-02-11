@@ -3,6 +3,16 @@ $(document).ready(function() {
 	var list = $('#list').html().split(',');
 	last = loadTen(last, list);
 
+	bind();
+
+	$(window).scroll(function() {
+		if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+			last = loadTen(last, list);
+        }
+	});
+});
+
+functio bind() {
 	$('.choice_i').bind('click', function() {
 		if ($(this).nextAll('.code_i:first').css('display') == 'none') {
 			$(this).nextAll('.code_i:first, .code_h:first').toggle();
@@ -13,13 +23,7 @@ $(document).ready(function() {
 			$(this).nextAll('.code_i:first, .code_h:first').toggle();
 		} 
 	});
-
-	$(window).scroll(function() {
-		if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-			last = loadTen(last, list);
-        }
-	});
-});
+}
 
 function newFont(name) {
 	var alphabet = $('#alphabet').html();
@@ -37,5 +41,6 @@ function loadTen(last, list) {
 	for (var i = last; i < (last+10); i++) {
 		$('.font-bin').append(newFont(list[i]));
 	}
+	bind();
 	return last += 10;
 }
